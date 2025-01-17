@@ -9,14 +9,6 @@
     font-family: 'Roboto', serif;
 }
 
-/* Temporary */
-
-img {
-    width: 40px;
-}
-
-/*  */
-
 .container {
     display: grid;
     grid-template-columns: 330px 1fr;
@@ -28,6 +20,8 @@ img {
     height: 100vh;
     width: 100%;
 }
+
+/* Sidebar */
 
 .sidebar {
     grid-area: sidebar;
@@ -82,9 +76,120 @@ img {
     gap: 48px;
 }
 
+/* Header */
+
 .header {
     grid-area: header;
-    background-color: red;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 0px 14px -4px rgba(66, 68, 90);
+}
+
+.header svg {
+    width: 24px;
+}
+
+.header img {
+    width: 40px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 72px;    
+}
+
+.header-top div:first-child {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    width: 60%;
+}
+
+#search {
+    border: transparent;
+    border-radius: 12px;
+    background-color: lightgray;
+    width: 100%;
+    height: 24px;
+}
+
+.header-top div:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+    width: 40%;
+}
+
+.header-top div:last-child span {
+    font-weight: 600;
+}
+
+.avatar {
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.small {
+    width: 40px;
+    height: 40px;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-bottom div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.big {
+    height: 64px;
+    width: 64px;
+}
+
+.user-greeting {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-weight: 600;
+
+}
+
+.greeting {
+    font-size: 0.9rem;
+}
+
+.username {
+    font-size: 1.5rem;
+}
+
+.header-bottom div:last-child {
+    display: flex;
+    gap: 20px;
+}
+
+.header-bottom button {
+    background-color: var(--skyblue-color);
+    color: white;
+    font-size: 1.2rem;
+    padding: 8px 30px;
+    border: transparent;
+    border-radius: 20px;
 }
 
 .main-content {
