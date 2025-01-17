@@ -1,9 +1,93 @@
+:root {
+    --skyblue-color: hsl(201, 78%, 46%);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', serif;
 }
 
-h1 {
-    color: red;
+/* Temporary */
+
+img {
+    width: 40px;
+}
+
+/*  */
+
+.container {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    grid-template-rows: 175px 1fr;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar content"
+    ;
+    height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--skyblue-color);
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    color: white;
+    padding: 32px;
+}
+
+.sidebar svg {
+    fill: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: -18px;
+    gap: 18px;
+}
+
+.logo svg {
+    width: 60px;
+}
+
+.logo span {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.nav svg {
+    width: 24px;
+}
+
+.nav-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 36px;
+}
+
+.nav-item span {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.header {
+    grid-area: header;
+    background-color: red;
+}
+
+.main-content {
+    grid-area: content;
+    background-color: green;
 }
